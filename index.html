@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>支付渠道管理系统原型</title>
+  <meta name="description" content="跨境支付渠道管理系统的交互原型：多产品线录入、按角色的数据隔离、多级审批和 FI Agent 问答。数据全部虚构。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Sora:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand"><span class="logo" aria-hidden="true"></span><b>支付渠道管理系统</b><span class="badge">原型 · 数据虚构</span></div>
+    <div class="switch">
+      <span class="switch-label">切换身份</span>
+      <div class="roles" id="roles" role="group" aria-label="切换身份"></div>
+    </div>
+    <div class="bar-right">
+      <button class="btn sm ghost" data-act="reset">重置演示</button>
+      <button class="btn sm gold agent-btn" data-act="agent">FI Agent</button>
+    </div>
+  </header>
+  <div class="shell">
+    <nav class="side">
+      <div class="me" id="me"></div>
+      <div class="nav" id="nav"></div>
+      <p class="side-note">换一个身份，看看能看到和能改的东西有什么不同。</p>
+    </nav>
+    <main id="main"></main>
+    <aside class="agent" id="agent" aria-label="FI Agent"></aside>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
